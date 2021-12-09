@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+<button type="button" onclick="foo()"> Click Me!!! </button> <br>
+
+Value inside declaration block:
+<p id="inside"></p>
+
+Type of variable v1 outside the block:
+<p id="temp"></p>
+
+Value outside declaration block:
+<p id="outside"></p>
+
+Value outside declaration function:
+<p id="outside2"></p>
+<script>
+    var v1 = 10;            // Defining a global variable (script scoped)
+    function var_vs_let_demo() {
+        var v1 = 15         // Defining a function scoped variable
+        if (true) {
+            let v1 = 20;        // Defining a block scoped variable
+            document.getElementById("inside").innerText = v1;       // v1 = 20 (block scoped)
+        }
+        document.getElementById("temp").innerText = typeof (v1)     // v1 = 15 (number)
+
+        if (typeof(v1) === "undefined") {
+            document.getElementById("outside").innerText = "v1 is undefined outside declaration block"
+        } else {
+            document.getElementById("outside").innerText = v1;      // v1 = 15  (function scoped)
+        }
+    }
+
+    function  foo () {
+        var_vs_let_demo()
+        if (typeof(v1) === "undefined") {
+            document.getElementById("outside2").innerText = "v1 is undefined outside declaration function"
+        } else {
+            document.getElementById("outside2").innerText = v1;     // v1 = 10 (global)
+        }
+    }
+</script>
+</body>
+</html>
