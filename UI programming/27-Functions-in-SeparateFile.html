@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Change document title when "Change Title" button is clicked -->
+    <title>Original Title</title>
+</head>
+<body>
+
+<!--This paragraph element will be modified by <script>  element during document load-->
+<p id="title1"></p>
+
+<!-- This paragraph element will be modified when button is clicked -->
+<p id="mytext1">Focus on this text. It will change when you click the button.</p>
+
+<p id="mytext2">Java Script Hands-on Training.</p>
+
+<!-- When button is clicked, it will change the text of paragraph (identified by "mytext1") -->
+<button type="button" onclick="displayText()"> >>> Click Here <<< </button><br> <br>
+
+<!-- Change the document title on click -->
+<button type="button" onclick="changeTitle()"> >>> Change Title <<< </button>
+
+<script src="scripts/27-Functions-in-SeparateFile.js"></script>
+</body>
+</html>

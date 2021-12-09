@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<button type="button" onclick="performArithmetic()"> Click Me!!! </button>
+
+<p id="result"></p>
+
+<script>
+    function performArithmetic() {
+
+        var a = 10, b = 20;
+        var c ;
+
+        console.log("a = " + a)
+        console.log("b = " + b)
+        console.log("c = " + c)
+
+        // Arithmetic addition operator (+)
+        c = a + b
+        console.log("c = " + c)
+
+        // String concatenation operator (+)
+        document.getElementById("result").innerHTML = a + "+" + b + "=" + c
+
+        // Modulo => provides reminder value
+        console.log(20 % 3)
+    }
+</script>
+</body>
+</html>

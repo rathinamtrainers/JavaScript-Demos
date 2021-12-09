@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+Enter a number: <input id="mydata" type="text"> <br>
+<button type="button" onclick="checkNumber()"> Click Me!!! </button>
+
+<p id="result"></p>
+
+<script>
+    function validate(a) {      // Start of Function Block
+        if (a >= 0)
+        { // start of "if" block"
+            return a + " is a positive number"
+        }  // end of "if" block"
+        else
+        {  // start of "else" block"
+            return a + " is a negative number"
+        }  // end  of "else" block"
+
+    }   // end of function block
+
+    function checkNumber() {
+        var n = document.getElementById("mydata").value;
+
+        var result = validate(n)
+
+        window.alert(result)
+    }
+</script>
+</body>
+</html>
